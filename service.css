@@ -119,133 +119,230 @@ header.scrolled {
 
 
 
-.contact-section {
-    padding: 50px 20px;
-    background-color: #f8f9fa;
-    margin-top: 60px;
+/* Service Section */
+#services {
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
   }
   
-  .contact-section h2 {
+  #services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .section-header {
     text-align: center;
-    color: goldenrod;
-    font-size: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #fff; /* Change text color for contrast */
   }
   
-  .contact-section p {
+  .section-header h2 {
+    font-size: 40px;
+    color: goldenrod;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .service-box {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(0, 100, 255, 0.1)); /* Gradient background */
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    color: #333;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    color: cadetblue;
+    margin-bottom: 15px;
+  }
+  
+  .service-box h3 {
+    font-size: 25px;
+    color: rgb(28, 36, 2);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .service-box p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .package-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #222;
+  }
+  
+  .package-list li {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive Layouts */
+  @media (max-width: 1024px) {
+    .service-box {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-box {
+      width: 100%;
+    }
+
+    .section-header h2  {
+        font-size: 25px;
+
+    }
+    .section-header p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .service-box h3 {
+        font-size: 20px;
+    }
+
+    .service-box p {
+        font-size: 16px;
+    }
+  }
+  
+
+  /* Portfolio slider section */
+#portfolio-slider {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+  
+  .section-header {
     text-align: center;
     margin-bottom: 40px;
   }
   
-  .contact-content {
+  .section-header h2 {
+    font-size: 40px;
+    color: goldenrod;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Slider Wrapper */
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .portfolio-items {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 60px;
+    transition: transform 0.5s ease-in-out;
   }
   
-  .contact-info, .contact-form {
-    flex-basis: 50%; /* Two columns of almost equal width */
-    margin-bottom: 20px;
-  }
-  .contact-info h3 {
-    color: cadetblue;
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 20px;
+  .portfolio-item {
+    flex: 1 0 30%; /* Three items in a row */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .contact-info ul {
-    list-style-type: none;
-    padding: 0;
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
   
-  .contact-info ul li {
-    font-size: 20px;
-    margin-bottom: 15px;
-    padding-bottom: 20px;
+  .portfolio-info {
+    padding: 15px;
+    text-align: center;
   }
   
-  .contact-info ul li i {
-    margin-right: 10px;
-  }
-
-  .contact-info ul li a {
-    color: cadetblue;
-    text-decoration: underline;
-  }
-
-  .contact-form h3 {
-    color: cadetblue;
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 20px;
-  }
-  
-  .contact-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form label {
+  .portfolio-info h3 {
+    font-size: 1.2rem;
+    color: #333;
     margin-bottom: 10px;
   }
   
-  .contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  .portfolio-info p {
+    font-size: 0.9rem;
+    color: #555;
   }
   
-  .contact-form button {
-    padding: 10px 20px;
-    background-color: #4d9559;
-    color: white;
+  /* Slider controls */
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
   }
   
-  .contact-form button:hover {
-    color: #fff;
-    background-color: #3d5e5b;
+  button.prev {
+    left: 0;
+  }
+  
+  button.next {
+    right: 0;
   }
   
   @media (max-width: 768px) {
-
-    .contact-content {
-        padding: 10px;
+    .portfolio-item {
+      min-width: calc(100% / 2); 
     }
 
-    .contact-info h3 {
-        font-size: 20px;
-        margin-top: 0;
-        text-align: center;
-    }
-
-    .contact-info ul li  {
-        font-size: 16px;
-
-    }
-
-    .contact-form h3  {
-        font-size: 20px;
-        text-align: center;
-    }
-    .contact-info, .contact-form {
-      flex-basis: 100%; /* Stacks the columns on smaller screens */
+    .section-header h2 {
+        font-size: 25px;
     }
   }
   
+  @media (max-width: 480px) {
+    .portfolio-item {
+      min-width: 100%; 
+    }
+  }
 
+ /*footer */
 
-  /*footer */
-
-footer {
+ footer {
     background: linear-gradient(to right, #3d5e5b, #192e0c);
     color: #fff;
     padding: 40px 20px;
@@ -323,17 +420,23 @@ footer {
 
   .footer-bottom p a {
     color: cadetblue;
-    font-size: 18px;
+    font-size: 25px;
     text-decoration: underline;
-  }
+}
   
   @media (max-width: 768px) {
     .footer-column {
       width: 45%;
     }
+
+
   
     .social-media a {
       display: inline-flex;
+    }
+
+    .footer-bottom p a {
+        font-size: 18px;
     }
   
     
@@ -344,3 +447,4 @@ footer {
       width: 100%;
     }
   }
+  

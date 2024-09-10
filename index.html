@@ -13,6 +13,8 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -20,35 +22,35 @@
 <body>
     
     <header>
-        <a href="#" class="logo">Apthan Tech</a>
+        <a href="#" class="logo">Abthan Technology <br> Services</a>
     
         <ul class="navlist" id="navlist">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     
         <!-- Updated menu icon using Boxicons -->
         <div id="menu-icon" class="bx bx-menu"></div>
     </header>
 
-<section class="hero">
-    <div class="hero-text">
-        <h5>The Leading</h5>
-        <h4>Internet Provider</h4>
-        <h1>In Kapsabet</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequatur libero numquam, eligendi dignissimos repellendus cum officia molestias, nulla cupiditate laboriosam assumenda et vel temporibus illum vitae ullam, hic dolores.</p>
-        <a href="#">Contact Us</a>
-        <a href="#">Explore services</a>
-    
-    </div>
+    <section class="hero">
+        <div class="hero-text">
+            <h5>The Leading</h5>
+            <h4>Internet Provider</h4>
+            <h1>In Kapsabet</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequatur libero numquam, eligendi dignissimos repellendus cum officia molestias, nulla cupiditate laboriosam assumenda et vel temporibus illum vitae ullam, hic dolores.</p>
+            <a href="contact.html">Contact Us</a>
+            <a href="service.html">Explore services</a>
+        
+        </div>
 
-    <div class="hero-img">
-        <img src="images/back2-min.jpg" alt="Tech guy">
-    </div>
+        <div class="hero-img">
+            <img src="images/back2-min.jpg" alt="Tech guy">
+        </div>
 
-</section>
+    </section>
 
 
 <div class="icons">
@@ -56,6 +58,286 @@
     <a href="#"><i class="ri-instagram-fill"></i></a>
     <a href="#"><i class="ri-facebook-fill"></i></a>
 </div>
+
+
+
+<section id="faqs" class="faqs-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <p>Got questions? We've got answers! Here are some of the most common inquiries we receive.</p>
+  
+      <div class="faq-grid">
+        <div class="faq">
+          <div class="question" onclick="toggleFaq(this)">
+            <h3>What is the installation cost for home internet?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="answer">
+            <p>The installation cost for our home internet package is 12,500/=, with monthly plans starting from 2,000/= for 6 Mbps.</p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <div class="question" onclick="toggleFaq(this)">
+            <h3>What packages do you offer for office internet?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="answer">
+            <p>We offer customized office internet solutions tailored to your business needs. Contact us for a personalized quote.</p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <div class="question" onclick="toggleFaq(this)">
+            <h3>Do you offer CCTV installation services?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="answer">
+            <p>Yes, we provide professional CCTV installation services. Packages are available for both homes and offices, and they include equipment and setup.</p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <div class="question" onclick="toggleFaq(this)">
+            <h3>How do I get support after installation?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="answer">
+            <p>We offer 24/7 customer support. You can reach us via phone, email, or WhatsApp for any assistance after installation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="cta" class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Experience Top-Notch Internet and Security Solutions?</h2>
+        <p>Get in touch with us today and let's find the perfect solution tailored for your home or business. Whether it's internet installation, CCTV, or biometric solutions, we've got you covered!</p>
+        <a href="#contact" class="cta-button">Contact Us Now</a>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <section id="packages" class="packages-section">
+    <div class="container">
+      <h2>Our Service Packages</h2>
+      <p>Choose the best package that fits your needs. We offer a wide range of services from internet installations to security solutions.</p>
+  
+      <div class="packages-grid">
+        <!-- Home Internet Installation -->
+        <div class="package">
+          <h3>Home Internet Installation</h3>
+          <p class="price">Ksh 12,500/=</p>
+          <ul>
+            <li>6 Mbps – Ksh 2,000/m</li>
+            <li>8 Mbps – Ksh 2,500/m</li>
+            <li>10 Mbps – Ksh 3,000/m</li>
+            <li>15 Mbps – Ksh 4,000/m</li>
+            <li>20 Mbps – Ksh 5,000/m</li>
+          </ul>
+        </div>
+  
+        <!-- Office Internet Installation -->
+        <div class="package">
+          <h3>Office Internet Installation</h3>
+          <p class="price">Custom Pricing</p>
+          <ul>
+            <li>Tailored office solutions</li>
+            <li>High-speed, reliable internet</li>
+            <li>Customized based on office size</li>
+            <li>Contact us for pricing</li>
+          </ul>
+        </div>
+  
+        <!-- Networking -->
+        <div class="package">
+          <h3>Networking</h3>
+          <p class="price">Custom Pricing</p>
+          <ul>
+            <li>Home or Office Networking</li>
+            <li>Wired & Wireless Network Setup</li>
+            <li>Router and Switch Installation</li>
+            <li>Contact us for a quote</li>
+          </ul>
+        </div>
+  
+        <!-- CCTV Installation -->
+        <div class="package">
+          <h3>CCTV Installation</h3>
+          <p class="price">Custom Pricing</p>
+          <ul>
+            <li>Home & Office Security Cameras</li>
+            <li>Indoor & Outdoor Installation</li>
+            <li>24/7 Surveillance Setup</li>
+            <li>Contact us for a quote</li>
+          </ul>
+        </div>
+  
+        <!-- Web Design -->
+        <div class="package">
+          <h3>Web Design</h3>
+          <p class="price">Custom Pricing</p>
+          <ul>
+            <li>Responsive Websites</li>
+            <li>E-commerce Solutions</li>
+            <li>Custom Design and Branding</li>
+            <li>Contact us for details</li>
+          </ul>
+        </div>
+  
+        <!-- Biometric Installation -->
+        <div class="package">
+          <h3>Biometric Installation</h3>
+          <p class="price">Custom Pricing</p>
+          <ul>
+            <li>Home & Office Biometric Systems</li>
+            <li>Access Control Setup</li>
+            <li>Attendance Management Systems</li>
+            <li>Contact us for a quote</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <p>Our talented and dedicated team is here to help you achieve success with our services.</p>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/kirui.jpeg" alt="Kirui">
+                <h3>Festus Kirui</h3>
+                <p>CEO & Lead Technician</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="images/amanda.jpg" alt="Amanda">
+                <h3>Amanda Sheryl</h3>
+                <p>Head of Marketing</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="images/kerich.jpg" alt="Kerich">
+                <h3>Emmanuel Kerich</h3>
+                <p>Web Developer</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="contact-section"></section>
+        <div class="container">
+          <h2>Contact Us</h2>
+          <p>If you have any questions or would like to get in touch, feel free to reach out to us!</p>
+          
+          <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h3>Our Contact Information</h3>
+              <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Kapsabet Town, Kenya</li>
+                <li><i class="fas fa-phone"></i> (+254) 711 980 164</li>
+                <li><i class="fas fa-envelope"></i> info@abthanservice.com</li>
+                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254711980164">Chat With Us</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact Form -->
+            <div class="contact-form">
+              <h3>Get in Touch</h3>
+              <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+      
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+      
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+      
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+
+      <!--footer-->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-row">
+            
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <p>Abthan Technology Service provides reliable internet solutions for businesses and homes. We pride ourselves on delivering the best service with unmatched support.</p>
+            </div>
+      
+           
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+      
+           
+            <div class="footer-column">
+              <h3>Contact Us</h3>
+              <ul class="footer-contact">
+                <li><i class="fa fa-map-marker"></i> Kapsabet County, Kenya</li>
+                <li><i class="fa fa-phone"></i> (+254) 711 980 164</li>
+                <li><i class="fa fa-envelope"></i> info@abthanservice.com</li>
+              </ul>
+            </div>
+      
+            
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <ul class="social-media">
+                <li><a href="#"><i class="ri-facebook-line"></i></a></li>
+                <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                <li><a href="#"><i class="ri-linkedin-line"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          
+          <div class="footer-bottom">
+            <p>&copy; 2024 Abthan Technology Service. Designed by <a href="#">Pro-Write Consultancy</a></p>
+          </div>
+        </div>
+      </footer>
+
 
 
 
