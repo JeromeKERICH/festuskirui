@@ -38,6 +38,7 @@ header.scrolled {
     font-weight: 700;
     color: wheat;
     font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -48,6 +49,7 @@ header.scrolled {
 }
 
 .navlist a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     font-size: 15px;
     font-weight: 600;
@@ -81,83 +83,134 @@ header.scrolled {
 }
 
 .hero-text h5 {
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hero-text h1 {
-    font-family: monospace;
-    font-size: 60px;
-    line-height: 1;
-    color: goldenrod;
-    margin: 0 0 25px;
+  font-family: monospace;
+  font-size: 60px;
+  line-height: 1;
+  color: goldenrod;
+  margin: 0 0 25px;
 }
 
 .hero-text h4 {
-    font-size: 22px;
-    font-weight: 600;
-    color: rgb(193, 243, 11);
-    margin-bottom: 10px;
-    font-style: italic;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: cadetblue;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .hero-text p {
-    color: white;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 30px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
 }
 
 .hero-img img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  object-fit: cover;
 }
 
 .hero-text a {
-    display: inline-block;
-    color: white;
-    background: #4d9559;
-    border: 1px solid transparent;
-    padding: 12px 25px;
-    line-height: 1;
-    font-size: 14px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    transition: all 0.55s ease;
+  display: inline-block;
+  color: white;
+  background: #4d9559;
+  border: 1px solid transparent;
+  padding: 12px 25px;
+  line-height: 1;
+  font-size: 14px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
 }
 
 .hero-text a:hover {
-    background: transparent;
-    border: 1px solid white;
-    transform: translateX(5px);
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(5px);
 }
 
 /* Social Icons */
 .icons {
-    position: absolute;
-    top: 50%;
-    padding: 0 5%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  padding: 0 5%;
+  transform: translateY(-50%);
 }
 
 .icons i {
-    display: block;
-    margin: 20px 0;
-    font-size: 24px;
-    color: white;
-    transition: all 0.55s ease;
+  display: block;
+  margin: 20px 0;
+  font-size: 24px;
+  color: white;
+  transition: all 0.55s ease;
 }
 
 .icons i:hover {
-    color: #4d9559;
-    transform: translateY(-5px);
+  color: #4d9559;
+  transform: translateY(-5px);
 }
+
+
+.hidden {
+  display: none;
+}
+
+#connectionForm {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#connectionForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#connectionForm input, #connectionForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#connectionForm button {
+  padding: 10px 20px;
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#connectionForm button:hover {
+  background-color: darkgoldenrod;
+}
+
+/* Close button styling */
+.close-btn {
+  background-color: crimson;
+  margin-left: 10px;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
 
 /* Media Queries */
 @media (max-width: 992px) {
@@ -177,7 +230,7 @@ header.scrolled {
     .hero {
         grid-template-columns: 1fr;
         padding: 0 8%;
-        text-align: end;
+        text-align: start;
         
     }
 
@@ -204,23 +257,27 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
-    .navlist {
-        position: fixed;
-        top: 0;
-        right: -100%; 
-        top: 10%;
-        display: flex;
-        background: linear-gradient(to right, #3d5e5b, #192e0c);
-        padding: 15px 45px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: right 0.4s ease;
-    }
 
-    .navlist.active {
-        right: 0; 
-    }
+  .hero {
+    gap: 0;
+  }
+  .navlist {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    top: 10%;
+    display: flex;
+    background: linear-gradient(to right, #3d5e5b, #192e0c);
+    padding: 15px 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+  }
+
+  .navlist.active {
+      right: 0; 
+  }
 
     .navlist a {
         font-size: 20px;
@@ -228,34 +285,29 @@ header.scrolled {
         font-weight: 400;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-
-    /* Show the menu icon on small screens */
+   
     #menu-icon {
         display: block;
     }
-    .hero-text h1 {
-        font-size: 40px;
-    }
 
     .hero-text h4 {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     .hero-text h5 {
-        font-size: 12px;
+        font-size: 20px;
     }
 
-    .hero-text p {
-        margin-bottom: 10px;
+    .hero-text h1 {
+      font-size: 40px;
     }
-
+    
     .hero-img img {
         max-width: 500px;
     }
 
     .hero-text a {
         font-size: 12px;
-        padding: 10px 20px;
     }
 }
 
@@ -283,7 +335,7 @@ header.scrolled {
 /* faqs */
 
 .faqs-section {
-    padding: 50px 20px;
+    padding: 30px 10px;
     background-color: #f9f9f9;
   }
   
@@ -312,7 +364,7 @@ header.scrolled {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 10px;
   }
   
   .question {
@@ -349,13 +401,15 @@ header.scrolled {
   
   /* Responsive Design */
   @media (max-width: 768px) {
+    .faq {
+      padding: 10px;
+    }
 
-
-    .faqs-section h2 {
+    .faqs-section .container h2 {
         font-size: 20px;
     }
 
-    .faqs-section p {
+    .faqs-section .container p {
         font-size: 16px;
         text-align: justify;
     }
@@ -374,9 +428,9 @@ header.scrolled {
   .cta-section {
     background-color: #1d3557; /* Dark Blue */
     color: #fff;
-    padding: 30px 20px;
+    padding: 30px 10px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   
   .cta-section h2 {
@@ -489,10 +543,11 @@ header.scrolled {
   }
   
   .package .price {
-    font-size: 1.2em;
+    font-size: 20px;
     color: #1d3557;
     margin-bottom: 10px;
     font-style: italic;
+    text-align: center;
   }
   
   .package ul {
@@ -505,21 +560,54 @@ header.scrolled {
     margin: 5px 0;
   }
   
+
+  .packages-section .package-cta {
+    margin-top: 30px;
+  }
+
+  .packages-section .package-cta a {
+    color: rgb(21, 21, 110);
+    text-decoration: underline;
+    font-size: 30px;
+  }
+
+  .packages-section .package-cta a:hover {
+    color: #192e0c;
+  }
   /* Responsive */
   @media (max-width: 1024px) {
+
     .packages-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
+
+  .packages-section {
+    padding: 10px;
+  }
 
     .packages-section .container h2 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
-    .packages-section p {
-        font-size: 18px;
+    .packages-section .container p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .packages-section .package-cta {
+      margin-top: 15px;
+    }
+
+    .packages-section .package-cta a {
+      font-size: 20px;
+    }
+
+
+    .package {
+      padding: 10px
     }
 
     .package h3 {
@@ -534,99 +622,125 @@ header.scrolled {
         font-size: 16px;
     }
     .packages-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 2, 1fr;
     }
   }
   
 
+  @media (max-width: 650px) {
+    .packages-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/*team section */
 
 
-  .team-section {
-    padding: 50px 20px;
-    background-color: #f7f7f7;
-    text-align: center;
+.team-section {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
 }
 
 .team-section h2 {
-    font-size: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-bottom: 20px;
-    color: goldenrod;
+  font-size: 40px;
+  font-family: 'Lucida Sans', sans-serif;
+  margin-bottom: 20px;
+  color: goldenrod;
 }
 
 .team-section p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    color: #666;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #666;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .team-member {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .team-member h3 {
-    font-size: 25px;
-    font-weight: 500;
-    color: cadetblue;
-    margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  color: cadetblue;
+  margin-bottom: 10px;
 }
 
 .team-member p {
-    font-size: 1.1em;
-    color: #777;
-    margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #777;
+  margin-bottom: 20px;
 }
 
 .social-icons a {
-    margin: 0 10px;
-    color: #555;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+  margin: 0 10px;
+  color: #555;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #e63946; 
+  color: #e63946;
 }
 
-/* media query */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* Media query for smaller screens */
 @media (max-width: 768px) {
+  .team-section h2 {
+      font-size: 25px;
+  }
 
-    .team-section h2 {
-        font-size: 25px;
-    }
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
+  /* Adjust the grid to show rows with sliding effect */
+  .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100%);
+      grid-template-rows: 1fr;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+  }
+
+  /* Snap the items */
+  .team-member {
+      scroll-snap-align: start;
+      min-width: 100%;
+  }
+
+  /* Hide scrollbar for clean look */
+  .team-grid::-webkit-scrollbar {
+      display: none;
+  }
+
+  .team-grid {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
 }
 
+
+/* contact */
 
 .contact-section {
     padding: 50px 20px;
@@ -640,7 +754,7 @@ header.scrolled {
     font-size: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .container p {
@@ -727,7 +841,7 @@ header.scrolled {
   @media (max-width: 768px) {
 
     .container {
-        padding: 30px;
+        padding: 20px;
     }
 
     .container h2 {
@@ -743,6 +857,10 @@ header.scrolled {
         font-size: 20px;
         margin-top: 0;
         text-align: center;
+    }
+
+    .contact-info {
+      text-align: justify;
     }
 
     .contact-info ul li  {

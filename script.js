@@ -16,6 +16,24 @@ menuIcon.addEventListener('click', () => {
 });
 
 
+document.getElementById("getConnectedLink").addEventListener("click", function(event){
+  event.preventDefault(); // Prevent default link behavior
+  const form = document.getElementById("connectionForm");
+  
+  // Show the form if it's hidden
+  form.classList.remove("hidden");
+});
+
+// Close button functionality
+document.getElementById("closeFormButton").addEventListener("click", function(event) {
+  const form = document.getElementById("connectionForm");
+  
+  // Hide the form when the close button is clicked
+  form.classList.add("hidden");
+});
+
+
+
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     header.classList.toggle("scrolled", window.scrollY > 50);
@@ -39,6 +57,10 @@ const values = document.querySelector('.values');
     values.addEventListener('mouseleave', () => {
     values.style.backgroundColor = '#fff';
     });
+
+
+
+
 
 //testimonials
 
@@ -73,6 +95,8 @@ $(document).ready(function(){
 
 
 
+
+
 function toggleFaq(faq) {
     const isActive = faq.parentElement.classList.contains('active');
     document.querySelectorAll('.faq').forEach(item => item.classList.remove('active'));
@@ -82,4 +106,6 @@ function toggleFaq(faq) {
     }
   }
   
+  
+
   

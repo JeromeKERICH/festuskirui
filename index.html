@@ -9,6 +9,7 @@
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
+    
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"/>
@@ -21,44 +22,70 @@
 </head>
 <body>
     
-    <header>
-        <a href="#" class="logo">Abthan Technology <br> Services</a>
-    
-        <ul class="navlist" id="navlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    
-        <!-- Updated menu icon using Boxicons -->
-        <div id="menu-icon" class="bx bx-menu"></div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h5>The Leading</h5>
-            <h4>Internet Provider</h4>
-            <h1>In Kapsabet</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequatur libero numquam, eligendi dignissimos repellendus cum officia molestias, nulla cupiditate laboriosam assumenda et vel temporibus illum vitae ullam, hic dolores.</p>
-            <a href="contact.html">Contact Us</a>
-            <a href="service.html">Explore services</a>
+  <header>
+      <a href="#" class="logo">Abthan Technology <br> Services</a>
+  
+      <ul class="navlist" id="navlist">
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  
+      <!-- Updated menu icon using Boxicons -->
+      <div id="menu-icon" class="bx bx-menu"></div>
+  </header>
+  <section class="hero">
+      <div class="hero-text">
+          <h5>The Leading</h5>
+          <h4>Internet Provider</h4>
+          <h1>In Kapsabet</h1>
+          <p>We are the leading internet provider, offering premium, powerful, and progressive connectivity solutions with a professional and proactive approach to ensuring reliable and high-speed internet for Kapsabet and beyond.</p>
+          <a href="tel:+254711980164">Call Us</a>
+          <a href="#" id="getConnectedLink">Get Connected</a>
         
-        </div>
+          <form id="connectionForm" class="hidden">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="residence">Residence</label>
+            <select id="residence" name="residence" required>
+                <option value="" disabled selected>Select your residence</option>
+                <option value="city1">Kapsabet</option>
+                <option value="city2">Kipsigak</option>
+                <option value="city3">Chebarbar</option>
+                <option value="city3">Lessos</option>
+                <option value="city3">Kaptumo</option>
+                <option value="city3">Nandi Hills</option>
+                <option value="city3">Mosoriot</option>
+                <option value="city3">Baraton</option>
+            </select>
+    
+            <label for="mode">Preferred Mode of Communication:</label>
+            <select id="mode" name="mode" required>
+                <option value="" disabled selected>Select a mode of communication</option>
+                <option value="phone">Phone</option>
+                <option value="whatsapp">WhatsApp</option>
+            </select>
+    
+            <button type="submit">Submit</button>
+            <button type="button" id="closeFormButton" class="close-btn">Close</button>
+        </form>
+      
+      </div>
 
-        <div class="hero-img">
-            <img src="images/back2-min.jpg" alt="Tech guy">
-        </div>
+      <div class="hero-img">
+          <img src="images/int.png" alt="Tech guy">
+      </div>
 
-    </section>
+  </section>
 
 
-<div class="icons">
+  <div class="icons">
     <a href="#"><i class="ri-whatsapp-line"></i></a>
     <a href="#"><i class="ri-instagram-fill"></i></a>
     <a href="#"><i class="ri-facebook-fill"></i></a>
-</div>
-
+  </div>
 
 
 <section id="faqs" class="faqs-section">
@@ -146,7 +173,7 @@
         <!-- Office Internet Installation -->
         <div class="package">
           <h3>Office Internet Installation</h3>
-          <p class="price">Custom Pricing</p>
+        
           <ul>
             <li>Tailored office solutions</li>
             <li>High-speed, reliable internet</li>
@@ -158,7 +185,7 @@
         <!-- Networking -->
         <div class="package">
           <h3>Networking</h3>
-          <p class="price">Custom Pricing</p>
+         
           <ul>
             <li>Home or Office Networking</li>
             <li>Wired & Wireless Network Setup</li>
@@ -170,7 +197,7 @@
         <!-- CCTV Installation -->
         <div class="package">
           <h3>CCTV Installation</h3>
-          <p class="price">Custom Pricing</p>
+          
           <ul>
             <li>Home & Office Security Cameras</li>
             <li>Indoor & Outdoor Installation</li>
@@ -182,7 +209,7 @@
         <!-- Web Design -->
         <div class="package">
           <h3>Web Design</h3>
-          <p class="price">Custom Pricing</p>
+          
           <ul>
             <li>Responsive Websites</li>
             <li>E-commerce Solutions</li>
@@ -194,7 +221,7 @@
         <!-- Biometric Installation -->
         <div class="package">
           <h3>Biometric Installation</h3>
-          <p class="price">Custom Pricing</p>
+        
           <ul>
             <li>Home & Office Biometric Systems</li>
             <li>Access Control Setup</li>
@@ -203,6 +230,9 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="package-cta">
+      <a href="#">Start Here</a>
     </div>
   </section>
   
@@ -314,7 +344,7 @@
             <div class="footer-column">
               <h3>Contact Us</h3>
               <ul class="footer-contact">
-                <li><i class="fa fa-map-marker"></i> Kapsabet County, Kenya</li>
+                <li><i class="fa fa-map-marker"></i> Barng'etuny Plaza, Kapsabet</li>
                 <li><i class="fa fa-phone"></i> (+254) 711 980 164</li>
                 <li><i class="fa fa-envelope"></i> info@abthanservice.com</li>
               </ul>
@@ -341,6 +371,13 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+
+    <script src="script.js">
+  
+    </script>
 </body>
 </html>

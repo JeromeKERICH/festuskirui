@@ -37,6 +37,7 @@ header.scrolled {
     font-weight: 700;
     color: wheat;
     font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -416,7 +417,7 @@ header.scrolled {
 
   /*footer */
 
-  footer {
+footer {
   background: linear-gradient(to right, #3d5e5b, #192e0c);
   color: #fff;
   padding: 40px 20px;
