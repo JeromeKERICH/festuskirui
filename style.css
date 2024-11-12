@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     padding: 0;
     margin: 0;
@@ -23,7 +23,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px 5%;
-    background-color: transparent; /* Transparent by default */
+    background-color: #3d5e5b;
     transition: background-color 0.3s;
 }
 
@@ -55,6 +55,8 @@ header.scrolled {
     font-weight: 600;
     border-bottom: 2px solid transparent;
     transition: 0.55s all ease;
+    list-style: none;
+    
 }
 
 .navlist a:hover {
@@ -66,14 +68,16 @@ header.scrolled {
     font-size: 35px;
     color: white;
     cursor: pointer;
-    display: none; /* Hidden on larger screens */
+    display: none; 
 }
 
 /* Hero Section */
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to right, #000000, #1a1a1a, #333333, #4d4d4d, #666666);
+    background: linear-gradient(to right, #302f2f, #201f1f, #333333, #4d4d4d, #666666);
+
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -330,6 +334,111 @@ header.scrolled {
 }
 
 
+#portfolio-slider {
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  color: goldenrod;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #777;
+}
+
+
+/* Slider Wrapper */
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.portfolio-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.portfolio-item {
+  flex: 1 0 30%; 
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.portfolio-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+button.prev, button.next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+
+  #portfolio-slider {
+    padding: 10px 0;
+  }
+  .portfolio-item {
+    min-width: calc(100% / 2); 
+  }
+
+  .section-header h2 {
+      font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    min-width: 100%; 
+  }
+}
+
 
 
 /* faqs */
@@ -354,7 +463,7 @@ header.scrolled {
   
   .faq-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr); 
     grid-auto-rows: auto;
     gap: 20px;
   }
@@ -414,7 +523,7 @@ header.scrolled {
         text-align: justify;
     }
     .faq-grid {
-      grid-template-columns: 1fr; /* Stack in single column on small screens */
+      grid-template-columns: 1fr; 
     }
   
     .question h3 {
@@ -426,7 +535,7 @@ header.scrolled {
 
 
   .cta-section {
-    background-color: #1d3557; /* Dark Blue */
+    background-color: #1d3557; 
     color: #fff;
     padding: 30px 10px;
     text-align: center;
@@ -451,7 +560,7 @@ header.scrolled {
   .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #4d9559; /* Red */
+    background-color: #4d9559; 
     color: #fff;
     border-radius: 5px;
     text-transform: uppercase;
@@ -532,7 +641,7 @@ header.scrolled {
   .package:hover h3, 
   .package:hover .price, 
   .package:hover ul li {
-    color: #fff; /* Change text color to white on hover */
+    color: #fff; 
   }
   
   .package h3 {
@@ -563,19 +672,140 @@ header.scrolled {
 
   .packages-section .package-cta {
     margin-top: 30px;
+    
   }
 
   .packages-section .package-cta a {
     color: rgb(21, 21, 110);
-    text-decoration: underline;
     font-size: 30px;
+    padding: 5px 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: #fff;
   }
 
   .packages-section .package-cta a:hover {
-    color: #192e0c;
+    background-color: #1d3557;
   }
-  /* Responsive */
-  @media (max-width: 1024px) {
+
+.package-cta a {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.package-cta a {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+/* Quote button */
+#quoteButton {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#quoteButton:hover {
+  background-color: #218838;
+}
+
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+#quoteForm {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+#quoteForm h2 {
+  font-size: 20px;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
 
     .packages-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -633,6 +863,21 @@ header.scrolled {
     }
   }
 
+@media (max-width: 480px) {
+  #quoteButton {
+      font-size: 16px;
+      padding: 10px 16px;
+  }
+
+  #quoteForm {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  form button {
+      font-size: 14px;
+  }
+}
 /*team section */
 
 
@@ -734,10 +979,44 @@ header.scrolled {
   }
 
   .team-grid {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+      -ms-overflow-style: none; 
+      scrollbar-width: none;  
   }
 }
+
+
+.whatsapp-heading {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #218838;
+  border-radius: 50%;
+  color: #000;
+  box-shadow: 0.5px 0.5px 1px var(--c-bluish);
+  z-index: 1000;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+}
+
+.whatsapp-heading a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.whatsapp-heading a:hover {
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .whatsapp-heading {
+      display: block; 
+  }
+}
+
 
 
 /* contact */
@@ -837,6 +1116,13 @@ header.scrolled {
     color: #fff;
     background-color: #3d5e5b;
   }
+
+  .success-message {
+    display: none;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+}
   
   @media (max-width: 768px) {
 
@@ -875,6 +1161,8 @@ header.scrolled {
     .contact-info, .contact-form {
       flex-basis: 100%; 
     }
+
+   
   }
   
 

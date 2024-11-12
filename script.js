@@ -1,11 +1,11 @@
 const menuIcon = document.getElementById('menu-icon');
 const navList = document.getElementById('navlist');
 
-// Toggle menu open/close and change icon
+
 menuIcon.addEventListener('click', () => {
     navList.classList.toggle('active');
     
-    // Toggle between the menu and close icon
+   
     if (menuIcon.classList.contains('bx-menu')) {
         menuIcon.classList.remove('bx-menu');
         menuIcon.classList.add('bx-x');
@@ -16,23 +16,113 @@ menuIcon.addEventListener('click', () => {
 });
 
 
+// portfolio script
+
+document.addEventListener('DOMContentLoaded', function() {
+  let slideIndex = 0; 
+
+  function moveSlide(step) {
+      const portfolioItems = document.querySelector('.portfolio-items');
+      const totalItems = portfolioItems.children.length;
+
+      let visibleItems = 3; 
+
+      if (window.innerWidth <= 480) {
+      visibleItems = 1; 
+      } else if (window.innerWidth <= 768) {
+      visibleItems = 2; 
+      }
+
+      slideIndex += step;
+
+  
+      if (slideIndex < 0) {
+      slideIndex = 0;
+      } else if (slideIndex > totalItems - visibleItems) {
+      slideIndex = totalItems - visibleItems;
+      }
+
+      const moveAmount = slideIndex * (-100 / visibleItems);
+      portfolioItems.style.transform = `translateX(${moveAmount}%)`;
+  }
+
+  
+  document.querySelector('.prev').addEventListener('click', function() {
+      moveSlide(-1);
+  });
+
+  document.querySelector('.next').addEventListener('click', function() {
+      moveSlide(1);
+  });
+
+  
+  window.addEventListener('resize', function() {
+      moveSlide(0); 
+  });
+  }); 
+
+
+
+ //get quote link
+document.getElementById("quoteButton").addEventListener("click", function(event) {
+  event.preventDefault();
+    document.getElementById("overlay").style.display = "flex";
+});
+
+
+function sendToWhatsApp() {
+    const name = document.getElementById("name").value;
+    const packageChoice = document.getElementById("package").value;
+    const comments = document.getElementById("comments").value;
+
+
+    const phoneNumber = "254711980164"; 
+    const message = `Hello, my name is ${name}. I am interested in the ${packageChoice} internet package. ${comments ? "Additional comments: " + comments : ""}`;
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  
+    window.open(whatsappLink, "_blank");
+
+   
+    document.getElementById("packageForm").reset();
+    closeForm();
+}
+
+
+function closeForm() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+
+document.getElementById("overlay").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closeForm();
+    }
+});
+
+
+//get connected link
+
 document.getElementById("getConnectedLink").addEventListener("click", function(event){
-  event.preventDefault(); // Prevent default link behavior
+  event.preventDefault(); 
   const form = document.getElementById("connectionForm");
   
-  // Show the form if it's hidden
+ 
   form.classList.remove("hidden");
 });
 
-// Close button functionality
+
 document.getElementById("closeFormButton").addEventListener("click", function(event) {
   const form = document.getElementById("connectionForm");
   
-  // Hide the form when the close button is clicked
+ 
   form.classList.add("hidden");
 });
 
 
+
+//navbar
 
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
@@ -57,6 +147,11 @@ const values = document.querySelector('.values');
     values.addEventListener('mouseleave', () => {
     values.style.backgroundColor = '#fff';
     });
+
+
+
+
+
 
 
 
@@ -107,5 +202,41 @@ function toggleFaq(faq) {
   }
   
   
+//contact sending emails
 
-  
+function submitForm(event) {
+  event.preventDefault(); 
+
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+
+ 
+  fetch(form.action, {
+      method: "POST",
+      body: new FormData(form)
+  })
+  .then(response => {
+      if (response.ok) {
+         
+          successMessage.style.display = "block";
+
+         
+          form.style.display = "none";
+
+         
+          form.reset();
+
+       
+          setTimeout(() => {
+              form.style.display = "block";
+              successMessage.style.display = "none";
+          }, 3000); 
+      } else {
+          alert("There was an error submitting the form. Please try again.");
+      }
+  })
+  .catch(error => {
+      console.error("Error:", error);
+      alert("There was an error submitting the form. Please try again.");
+  });
+}
