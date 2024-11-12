@@ -239,9 +239,86 @@ header.scrolled {
         font-size: 16px;
     }
   }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons a {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    color: #222;
+    background: #4d9559;
+    border: 1px solid transparent;
+    padding: 12px 25px;
+    line-height: 1;
+    font-size: 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.55s ease;
+  }
+  
+  .buttons a:hover {
+    background: transparent;
+    border: 1px solid #222;
+    transform: translateX(5px);
+  }
   
 
-  /* Portfolio slider section */
+  .hidden {
+    display: none;
+  }
+  
+  #connectionForm {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #connectionForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #connectionForm input, #connectionForm select {
+    
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #connectionForm button {
+    width: 20%;
+    padding: 5px 10px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #connectionForm button:hover {
+    background-color: darkgoldenrod;
+  }
+  
+  /* Close button styling */
+  .Close-btn {
+    margin-top: 10px;
+    background-color: goldenrod;
+    margin-left: 10px;
+  }
+  
+  .close-btn:hover {
+    background-color: darkred;
+  }
 
  /*footer */
 

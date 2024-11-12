@@ -114,6 +114,36 @@
               
             </div>
           </div>
+          <div class="buttons">
+            <a href="#" id="getConnectedLink">Get Connected Now</a>
+            <form id="connectionForm" class="hidden">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+      
+              <label for="residence">Residence</label>
+              <select id="residence" name="residence" required>
+                  <option value="" disabled selected>Select your residence</option>
+                  <option value="city1">Kapsabet</option>
+                  <option value="city2">Kipsigak</option>
+                  <option value="city3">Chebarbar</option>
+                  <option value="city3">Lessos</option>
+                  <option value="city3">Kaptumo</option>
+                  <option value="city3">Nandi Hills</option>
+                  <option value="city3">Mosoriot</option>
+                  <option value="city3">Baraton</option>
+              </select>
+      
+              <label for="mode">Preferred Mode of Communication:</label>
+              <select id="mode" name="mode" required>
+                  <option value="" disabled selected>Select a mode of communication</option>
+                  <option value="phone">Phone</option>
+                  <option value="whatsapp">WhatsApp</option>
+              </select>
+      
+              <button type="submit">Submit</button>
+              <button type="button" id="closeFormButton" class="Close-btn">Close</button>
+          </form>
+          </div>
         </div>
       </section>
 
