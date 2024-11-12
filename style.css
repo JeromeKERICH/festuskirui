@@ -185,6 +185,7 @@ header.scrolled {
 }
 
 #connectionForm input, #connectionForm select {
+  
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -193,7 +194,8 @@ header.scrolled {
 }
 
 #connectionForm button {
-  padding: 10px 20px;
+  width: 20%;
+  padding: 5px 10px;
   background-color: goldenrod;
   color: white;
   border: none;
@@ -206,8 +208,9 @@ header.scrolled {
 }
 
 /* Close button styling */
-.close-btn {
-  background-color: crimson;
+.Close-btn {
+  margin-top: 10px;
+  background-color: goldenrod;
   margin-left: 10px;
 }
 
