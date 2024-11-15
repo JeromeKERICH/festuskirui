@@ -77,7 +77,7 @@ function sendToWhatsApp() {
 
 
     const phoneNumber = "254711980164"; 
-    const message = `Hello, my name is ${name}. I am interested in the ${packageChoice} internet package. ${comments ? "Additional comments: " + comments : ""}`;
+    const message = `Hello. ${name}. I am interested in the ${packageChoice} internet package. ${comments ? "Additional comments: " + comments : ""}`;
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -103,7 +103,6 @@ document.getElementById("overlay").addEventListener("click", function(event) {
 
 
 //get connected link
-
 document.getElementById("getConnectedLink").addEventListener("click", function(event){
   event.preventDefault(); 
   const form = document.getElementById("connectionForm");
@@ -120,6 +119,26 @@ document.getElementById("closeFormButton").addEventListener("click", function(ev
   form.classList.add("hidden");
 });
 
+document.getElementById('connectionForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const residence = document.getElementById('residence').value;
+  const mode = document.getElementById('mode').value;
+
+  const message = `Name: ${name}%0AResidence: ${residence}%0AMode of Communication: ${mode}`;
+
+
+  const whatsappLink = `https://wa.me/254711980164?text=${message}`;
+
+
+  window.open(whatsappLink, '_blank');
+});
+
+
+document.getElementById('closeFormButton').addEventListener('click', function () {
+  document.getElementById('connectionForm').classList.add('hidden');
+});
 
 
 //navbar

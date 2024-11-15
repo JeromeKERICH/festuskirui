@@ -250,6 +250,38 @@ header.scrolled {
   }
   
 
+  .whatsapp-heading {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #218838;
+    border-radius: 50%;
+    color: #000;
+    box-shadow: 0.5px 0.5px 1px var(--c-bluish);
+    z-index: 1000;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+  }
+  
+  .whatsapp-heading a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .whatsapp-heading a:hover {
+    text-decoration: none;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .whatsapp-heading {
+        display: block; 
+    }
+  }
+
 
   /*footer */
 
