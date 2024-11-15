@@ -122,6 +122,7 @@ document.getElementById("closeFormButton").addEventListener("click", function(ev
 document.getElementById('connectionForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
+ 
   const name = document.getElementById('name').value;
   const residence = document.getElementById('residence').value;
   const mode = document.getElementById('mode').value;
